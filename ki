@@ -1,5 +1,5 @@
 1. buat database dengan nim 
-create database 281;
+create database `281`;
 
 2.import database
 
