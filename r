@@ -31,7 +31,7 @@ JOIN dokter ON rekam_medis.id_dokter = dokter.id_dokter;
 SELECT * FROM rekam_medis WHERE id_pasien IN (SELECT id_pasien FROM pasien WHERE umur >= (SELECT AVG(umur) FROM pasien));
 18.Tampilkan jumlah rekam medis untuk setiap pasien (subquery)
 SELECT id_pasien, COUNT(*) AS jumlah_rekam_medis FROM rekam_medis GROUP BY id_pasien;
-19.Tambahkan kolom status pada tabel pasien (triggers)
+19 & 20.Tambahkan kolom status pada tabel pasien (triggers)
 -- Trigger untuk memperbarui status pasien saat ada perubahan pada tabel rawat_inap
 CREATE TRIGGER update_status_pasien AFTER INSERT OR UPDATE OR DELETE ON rawat_inap
 FOR EACH ROW
